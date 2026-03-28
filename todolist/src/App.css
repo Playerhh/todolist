@@ -1,0 +1,129 @@
+/* 基础重置与排版 */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f7f6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    margin: 0;
+}
+
+/* 主容器 */
+.app-container {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 0;
+}
+
+/* 表单区 */
+.todo-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.todo-form input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+}
+
+.todo-form input:focus {
+    border-color: #007bff;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    background-color: #007bff;
+    transition: opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* 列表区 */
+.todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    background: #f9f9f9;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    transition: all 0.2s;
+}
+
+.todo-item:hover {
+    background: #f1f1f1;
+}
+
+/* 文本和完成状态 */
+.view-mode, .edit-mode {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todo-text {
+    cursor: pointer;
+    flex: 1;
+    word-break: break-all;
+    user-select: none;
+}
+
+.todo-item.completed .todo-text {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* 按钮样式细分 */
+.actions {
+    display: flex;
+    gap: 5px;
+}
+
+.btn-edit { background-color: #ffc107; color: #333; }
+.btn-delete { background-color: #dc3545; }
+.btn-save { background-color: #28a745; }
+.btn-cancel { background-color: #6c757d; }
+
+.edit-mode input {
+    flex: 1;
+    margin-right: 10px;
+    padding: 6px;
+}
+
+/* 空状态提示 */
+.empty-tips {
+    text-align: center;
+    color: #888;
+    padding: 20px 0;
+}
